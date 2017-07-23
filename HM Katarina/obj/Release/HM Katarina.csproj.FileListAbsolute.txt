@@ -7,3 +7,4 @@ C:\Users\HappyMajor\Documents\GitHub\Elobuddy\HM Katarina\bin\Release\SharpDX.Di
 C:\Users\HappyMajor\Documents\GitHub\Elobuddy\HM Katarina\bin\Release\Newtonsoft.Json.dll
 C:\Users\HappyMajor\Documents\GitHub\Elobuddy\HM Katarina\obj\Release\HMKatarina.exe
 C:\Users\HappyMajor\Documents\GitHub\Elobuddy\HM Katarina\obj\Release\HMKatarina.pdb
+C:\Users\HappyMajor\Documents\GitHub\Elobuddy\HM Katarina\obj\Release\HM Katarina.csprojResolveAssemblyReference.cache
