@@ -1,0 +1,9 @@
+C:\Users\HappyMajor\Documents\GitHub\Elobuddy\HM Katarina\bin\Release\HMKatarina.exe
+C:\Users\HappyMajor\Documents\GitHub\Elobuddy\HM Katarina\bin\Release\HMKatarina.pdb
+C:\Users\HappyMajor\Documents\GitHub\Elobuddy\HM Katarina\bin\Release\EloBuddy.dll
+C:\Users\HappyMajor\Documents\GitHub\Elobuddy\HM Katarina\bin\Release\EloBuddy.SDK.dll
+C:\Users\HappyMajor\Documents\GitHub\Elobuddy\HM Katarina\bin\Release\SharpDX.dll
+C:\Users\HappyMajor\Documents\GitHub\Elobuddy\HM Katarina\bin\Release\SharpDX.Direct3D9.dll
+C:\Users\HappyMajor\Documents\GitHub\Elobuddy\HM Katarina\bin\Release\Newtonsoft.Json.dll
+C:\Users\HappyMajor\Documents\GitHub\Elobuddy\HM Katarina\obj\Release\HMKatarina.exe
+C:\Users\HappyMajor\Documents\GitHub\Elobuddy\HM Katarina\obj\Release\HMKatarina.pdb
