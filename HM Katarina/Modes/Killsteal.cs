@@ -3,6 +3,9 @@ using EloBuddy.SDK;
 using EloBuddy.SDK.Menu.Values;
 using static HMKatarina.SpellLoader;
 using static HMKatarina.MenuLoader;
+using static HMKatarina.Modes.Combo;
+using static HMKatarina.Dagger;
+ 
 
 namespace HMKatarina.Modes
 {
@@ -33,7 +36,7 @@ namespace HMKatarina.Modes
 
         public static void ActivateKS()
         {
-            
+            var dd = ComboMenu["useD"].Cast<CheckBox>().CurrentValue;
             
             var target = TargetSelector.GetTarget(E.Range, DamageType.Magical);
 
@@ -42,15 +45,27 @@ namespace HMKatarina.Modes
                 Q.Cast(target);
 
 
-
+            var d = GetClosestDagger();
             if (target != null && EDamage(target) >= target.Health &&
                 KillstealMenu["E"].Cast<CheckBox>().CurrentValue)
             {
-                E.Cast(target.Position);
-                W.Cast();
-            }
-                
+                if (target.Position.IsInRange(d, W.Range) && dd)
 
+                {
+
+                    E.Cast(GetBestDaggerPoint(d, target));
+                }
+                else
+                {
+                    E.Cast(target.Position);
+                }
+            }
+            var qtarget = TargetSelector.GetTarget(Q.Range, DamageType.Magical);    
+            var r = HarassMenu["useQA"].Cast<CheckBox>().CurrentValue && Q.IsReady();
+            if (r && qtarget != null )
+            {
+                Q.Cast(qtarget);
+            }
 
         }
     }

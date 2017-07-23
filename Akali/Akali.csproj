@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F102F7BA-3E3B-408D-9339-3EB4A96AD25D}</ProjectGuid>
+    <ProjectGuid>{FF8CBFF6-E959-44C8-8829-4FA6E0C9B0FF}</ProjectGuid>
     <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HMKatarina</RootNamespace>
-    <AssemblyName>HMKatarina</AssemblyName>
+    <RootNamespace>Akali</RootNamespace>
+    <AssemblyName>Akali</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -50,15 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dagger.cs" />
-    <Compile Include="ItemActivator.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="Modes\Combo.cs" />
     <Compile Include="Modes\Flee.cs" />
-    <Compile Include="Modes\Harass.cs" />
     <Compile Include="Modes\Killsteal.cs" />
     <Compile Include="Modes\Laneclear.cs" />
-    <Compile Include="PermaActive.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Spells.cs" />

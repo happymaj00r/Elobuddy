@@ -1,0 +1,10 @@
+C:\Users\HappyMajor\Documents\GitHub\Elobuddy\Akali\bin\Release\Akali.exe
+C:\Users\HappyMajor\Documents\GitHub\Elobuddy\Akali\bin\Release\Akali.pdb
+C:\Users\HappyMajor\Documents\GitHub\Elobuddy\Akali\bin\Release\EloBuddy.dll
+C:\Users\HappyMajor\Documents\GitHub\Elobuddy\Akali\bin\Release\EloBuddy.SDK.dll
+C:\Users\HappyMajor\Documents\GitHub\Elobuddy\Akali\bin\Release\SharpDX.dll
+C:\Users\HappyMajor\Documents\GitHub\Elobuddy\Akali\bin\Release\SharpDX.Direct3D9.dll
+C:\Users\HappyMajor\Documents\GitHub\Elobuddy\Akali\bin\Release\Newtonsoft.Json.dll
+C:\Users\HappyMajor\Documents\GitHub\Elobuddy\Akali\obj\Release\Akali.exe
+C:\Users\HappyMajor\Documents\GitHub\Elobuddy\Akali\obj\Release\Akali.pdb
+C:\Users\HappyMajor\Documents\GitHub\Elobuddy\Akali\obj\Release\Akali.csprojResolveAssemblyReference.cache

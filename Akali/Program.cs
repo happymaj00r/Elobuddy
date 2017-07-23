@@ -13,7 +13,7 @@ using static HMKatarina.MenuLoader;
 using static  HMKatarina.Modes.Laneclear;
 using static HMKatarina.Modes.Killsteal;
 using static HMKatarina.Modes.Flee;
-using static HMKatarina.Modes.Harras;
+
 namespace HMKatarina
 {
     class Program
@@ -25,50 +25,41 @@ namespace HMKatarina
 
         private static void Loading_OnLoadingComplete(EventArgs args)
         {
-            if (Player.Instance.ChampionName != "Katarina") return;
+            if (Player.Instance.ChampionName != "Akali") return;
 
             LoadSpells();
             LoadMenu();
             Game.OnTick += Game_OnTick;
-            Obj_AI_Base.OnBuffGain += OnBuffGain;
-            Obj_AI_Base.OnBuffLose += OnBuffLose;
-            
+           
+            Obj_AI_Base.OnSpellCast += OnDoCast;
 
             Chat.Print("<font color='#FFFFFF'>HM Katarina <font color='#CF2942'>By HappyMajor</font>  has been loaded.</font>");
         }
 
+        public static void OnDoCast(Obj_AI_Base sender, GameObjectProcessSpellCastEventArgs args)
+        {
+            if (!sender.IsMe || !Orbwalker.IsAutoAttacking) //!Orbwalking.IsAutoAttack(args.SData.Name))
+            {
+                return;
+            }
+            var e = ComboMenu["useECombo"].Cast<CheckBox>().CurrentValue && E.IsReady();
+            var a = TargetSelector.GetTarget(E.Range, DamageType.Physical);
+            if (a == null || a.IsInvulnerable || a.MagicImmune)
+            {
+                return;
+            }
+            if (Orbwalker.ActiveModesFlags.HasFlag(Orbwalker.ActiveModes.Combo))
+
+            {
+                if (e)
+                {
+                    E.Cast();
+                }
+            }
+        }
 
         public static bool _isChannelingImportantSpell;
-        public static bool _isUlting;
-
-        public static void OnBuffGain(Obj_AI_Base sender, Obj_AI_BaseBuffGainEventArgs args)
-
-        {
-            if (args.Buff.Name.ToLower() == "katarinarsound" || args.Buff.Name.ToLower() == "katarinar" ||
-                _isChannelingImportantSpell)
-            {
-
-                
-                Orbwalker.DisableAttacking = true;
-                Orbwalker.DisableMovement = true;
-                _isUlting = true;
-
-
-
-            }
-        }
-
-        public static void OnBuffLose(Obj_AI_Base sender, Obj_AI_BaseBuffLoseEventArgs args)
-        {
-            if (args.Buff.Name.ToLower() == "katarinarsound" || args.Buff.Name.ToLower() == "katarinar")
-            {
-                
-                Orbwalker.DisableAttacking = false;
-                Orbwalker.DisableMovement = false;
-                _isUlting = false;
-            }
-        }
-
+        
         private static void Game_OnTick(EventArgs args)
         {
            
@@ -83,10 +74,6 @@ namespace HMKatarina
             if (Orbwalker.ActiveModesFlags.Equals(Orbwalker.ActiveModes.Flee))
             {
                 FleeActivate();
-            }
-            if (Orbwalker.ActiveModesFlags.Equals(Orbwalker.ActiveModes.Harass))
-            {
-                ActivatedHarass();
             }
             if (KillstealMenu["useKS"].Cast<CheckBox>().CurrentValue)
             {

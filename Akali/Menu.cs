@@ -31,16 +31,7 @@ namespace HMKatarina
             ComboMenu.Add("useRCombo", new CheckBox("Use R", false));
             ComboMenu.Add("useD", new CheckBox("Use Jump to Dagger", false));
             ComboMenu.Add("useRECombo", new CheckBox("Use E if Enemy walk outside R range", false));
-            ComboMenu.Add("useITEMS", new CheckBox("Use Items", false));
-            
-            
-            HarassMenu = Menu.AddSubMenu("Harass Settings", "Harass");
-            HarassMenu.Add("UseQH", new CheckBox("Use Q", false));
-            HarassMenu.Add("useWH", new CheckBox("Use W", false));
-            HarassMenu.Add("useEH", new CheckBox("Use E", false));
-            HarassMenu.Add("UseQA", new CheckBox("Use Auto Q", false));
-            HarassMenu.Add("UseDH", new CheckBox("Use Dagger Logic in Harras", false));
-            
+
             LaneClearMenu = Menu.AddSubMenu("Laneclear Settings", "Laneclear");
             LaneClearMenu.Add("useQLC", new CheckBox("Use Q", false));
             LaneClearMenu.Add("useWLC", new CheckBox("Use W", false));
@@ -49,7 +40,8 @@ namespace HMKatarina
             KillstealMenu = Menu.AddSubMenu("Killsteal Settings", "Killsteal");
             KillstealMenu.Add("useKS", new CheckBox("Use Killsteal",false));
             KillstealMenu.Add("Q", new CheckBox("Use Q", false));
-            KillstealMenu.Add("E", new CheckBox("Use EW", false));
+            KillstealMenu.Add("E", new CheckBox("Use E", false));
+            KillstealMenu.Add("R", new CheckBox("Use R", false));
            
         }
     }
