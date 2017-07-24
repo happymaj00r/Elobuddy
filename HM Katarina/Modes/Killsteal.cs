@@ -67,6 +67,19 @@ namespace HMKatarina.Modes
                 Q.Cast(qtarget);
             }
 
+
+            if (target != null && QDamage(target) + EDamage(target) >= target.Health && KillstealMenu["Q"].Cast<CheckBox>().CurrentValue && KillstealMenu["E"].Cast<CheckBox>().CurrentValue)
+            {
+                E.Cast(target);
+                Q.Cast(target);
+                if (W.IsReady())
+                {
+                    W.Cast();
+                }
+            }
+            {
+                
+            }
         }
     }
 }

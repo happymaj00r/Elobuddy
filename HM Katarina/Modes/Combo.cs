@@ -7,7 +7,7 @@ using static HMKatarina.SpellLoader;
 using static HMKatarina.MenuLoader;
 using static HMKatarina.Dagger;
 using static HMKatarina.Program;
-using static HMKatarina.Itemactivator;
+using static HMKatarina.Itemactivatorr;
 
 namespace HMKatarina.Modes
 {

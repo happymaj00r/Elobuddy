@@ -6,7 +6,7 @@ using HMKatarina.Modes;
 
 namespace HMKatarina
 {
-    public static class Itemactivator
+    public static class Itemactivatorr
     {
         
         

@@ -16,7 +16,7 @@ namespace HMKatarina.Modes
             var q = HarassMenu["useQH"].Cast<CheckBox>().CurrentValue && Q.IsReady();
             var w = HarassMenu["useWH"].Cast<CheckBox>().CurrentValue && W.IsReady();
             var e = HarassMenu["useEH"].Cast<CheckBox>().CurrentValue && E.IsReady();
-            var r = HarassMenu["useQA"].Cast<CheckBox>().CurrentValue && R.IsReady();
+            var r = HarassMenu["useQA"].Cast<CheckBox>().CurrentValue;
             var dd = HarassMenu["useDH"].Cast<CheckBox>().CurrentValue;
             var qtarget = TargetSelector.GetTarget(Q.Range, DamageType.Magical);
             var wtarget = TargetSelector.GetTarget(W.Range, DamageType.Magical);

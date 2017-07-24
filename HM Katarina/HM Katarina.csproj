@@ -58,7 +58,6 @@
     <Compile Include="Modes\Harass.cs" />
     <Compile Include="Modes\Killsteal.cs" />
     <Compile Include="Modes\Laneclear.cs" />
-    <Compile Include="PermaActive.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Spells.cs" />
